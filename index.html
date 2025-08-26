@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Platformer — Jogo Web (HTML/CSS/JS)</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="wrap">
+    <canvas id="game"></canvas>
+
+    <div id="ui">
+      <div id="hud">
+        <div id="score">Score: 0</div>
+        <div id="lives">Vidas: 3</div>
+        <div id="level">Nível: 1</div>
+      </div>
+
+      <div id="menu" class="overlay">
+        <h1>Platformer — Missão do Corajoso Quadrado</h1>
+        <p>Use ← → para andar, ↑ ou [W] para pular. Colete todas as estrelas e chegue na bandeira!</p>
+        <button id="startBtn">Iniciar Jogo</button>
+      </div>
+
+      <div id="paused" class="overlay hidden">
+        <h2>Pausado</h2>
+        <button id="resumeBtn">Continuar</button>
+        <button id="restartBtn">Reiniciar</button>
+      </div>
+
+      <div id="gameover" class="overlay hidden">
+        <h2>Game Over</h2>
+        <p id="finalScore"></p>
+        <button id="tryAgainBtn">Jogar Novamente</button>
+      </div>
+
+      <div id="win" class="overlay hidden">
+        <h2>Você venceu o nível!</h2>
+        <button id="nextLevelBtn">Próximo Nível</button>
+      </div>
+
+      <div id="mobile-controls" class="mobile-controls">
+        <button id="leftBtn" class="ctl">◀</button>
+        <button id="upBtn" class="ctl">▲</button>
+        <button id="rightBtn" class="ctl">▶</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
